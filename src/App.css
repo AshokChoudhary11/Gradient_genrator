@@ -1,0 +1,290 @@
+body {
+  background-color: #0e141b;
+  background-image: url("https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fshadow-palette%2Fslopes.png&w=3840&q=75");
+  color: white;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 400px;
+  object-fit: none;
+}
+header {
+  border-bottom: 0.5px solid gray;
+}
+.header_part {
+  display: flex;
+  padding: 30px 10px;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, yellow, rgb(255, 145, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.blog_page {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+.blog_page:hover {
+  text-decoration: underline;
+}
+.main-container {
+  display: grid;
+  gap: 64px 48px;
+  grid-template-columns: 1fr minmax(350px, 1fr);
+  /* grid-template-areas:
+    "demo header"
+    "demo controls"
+    "demo code"; */
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 60px 32px 32px 32px;
+}
+.gradient-Box_border {
+  width: 100%;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+.gradient-Box {
+  flex: 1;
+  /* background: var(--gradient); */
+  background-color: red;
+  width: 100%;
+  border: 8px solid white;
+  border-radius: 16px;
+}
+.gradient_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gradient_header h2 {
+  background: linear-gradient(to right, yellow, rgb(255, 145, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.color_box {
+  margin: 20px 0px;
+  width: 100%;
+}
+.color_box_heading {
+  margin-bottom: 8px;
+}
+.color_rectangles {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.color_input {
+  all: unset;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 20%;
+  background-color: #000;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline-color: "red";
+  outline-style: none;
+  box-sizing: content-box;
+}
+.all_color_modal_button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.color_modal_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.color_modal_button {
+  width: 100px;
+  height: 60px;
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(116, 116, 116);
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.color_modal_button:hover {
+  color: rgb(211, 211, 211);
+  border: 1px solid rgb(211, 211, 211);
+}
+.angle_curve_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.angle_container_heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.angle_container_heading {
+  font-size: 18px;
+}
+.angle_heading {
+  font-weight: 500;
+}
+.gradient-selector {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid gray;
+  overflow: hidden;
+}
+
+.needle {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 4px;
+  height: 100px;
+  background-color: white;
+  transform-origin: 50% 100%;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+.center {
+  height: 15px;
+  width: 15px;
+  bottom: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: gray;
+  border-radius: 50%;
+}
+.easing_curve_heading {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.gradient-generator {
+  text-align: center;
+}
+
+.gradient {
+  width: 250px;
+  height: 250px;
+  border: 5px solid gray;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Easing_curve_buttons {
+  padding: 8px 18px;
+  font-size: 14px;
+  background-color: transparent;
+  color: rgb(116, 116, 116);
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Easing_curve_buttons:hover {
+  color: rgb(211, 211, 211);
+  border: 1px solid rgb(211, 211, 211);
+}
+.gradientCode_Container {
+  width: 100%;
+  margin-top: 20px;
+}
+.gradientCode_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.gradient_box_heading {
+  font-size: 22px;
+}
+.gradient_css {
+  font-size: 30px;
+  background-color: #1c2732;
+  padding: 0 16px 5px 16px;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+.gradient_code {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  background-color: #1c2732;
+  margin-top: -8px;
+}
+.code_copy_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 100px;
+  gap: 16px;
+}
+.copy_button {
+  padding: 14px 24px;
+  font-size: 12px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #1c2732;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer_section {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: auto;
+}
+.footer_logo {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(99, 117, 151), rgb(9, 76, 87));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+.copyRight {
+  font-size: 12px;
+  margin-top: 40px;
+  color: rgb(164, 164, 164);
+}
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  color: rgb(106, 106, 106);
+  gap: 5px;
+}
+.footer_links > div {
+  font-size: 20px;
+}
+.footer_links > a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer_links > a:hover {
+  text-decoration: underline;
+}
