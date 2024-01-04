@@ -1,13 +1,13 @@
 body {
   background-color: #0e141b;
-  background-image: url("https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fshadow-palette%2Fslopes.png&w=3840&q=75");
   color: white;
   background-size: cover;
-  background-position: bottom;
   width: 100%;
   height: 400px;
   object-fit: none;
 }
+
+
 header {
   border-bottom: 0.5px solid gray;
 }
