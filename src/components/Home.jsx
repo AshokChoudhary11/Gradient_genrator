@@ -2,9 +2,10 @@ import React from "react";
 import "../App.css";
 import ColorSelector from "./ColorSelector";
 import ColorMode from "./ColorMode";
-import AngleAndCurve from "./AngleAndCurve";
+import { Angle } from "./Angle";
 import GradientCode from "./GradientCode";
 import Footer from "./Footer";
+import { Precision } from './Precision'
 
 const Home = () => {
   return (
@@ -25,11 +26,8 @@ const Home = () => {
             <div className="gradient_controller">
               <ColorSelector></ColorSelector>
               <ColorMode></ColorMode>
-              <div className="precision">
-                <div>Precision:</div>
-                <input type="range" />
-              </div>
-              <AngleAndCurve></AngleAndCurve>
+              <Precision />
+              <Angle />
               <GradientCode></GradientCode>
             </div>
           </div>

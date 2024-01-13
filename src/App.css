@@ -5,8 +5,31 @@ body {
   width: 100%;
   height: 400px;
   object-fit: none;
+  font-family: "martel";
 }
 
+@font-face {
+  font-family: martel;
+  src: url(./fonts/MartelSans-Bold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: martel;
+  src: url(./fonts/MartelSans-SemiBold.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: martel;
+  src: url(./fonts/MartelSans-Regular.ttf);
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 
 header {
   border-bottom: 0.5px solid gray;
@@ -77,103 +100,13 @@ header {
   background-clip: text;
   color: transparent;
 }
-.color_box {
-  margin: 20px 0px;
-  width: 100%;
-}
-.color_box_heading {
-  margin-bottom: 8px;
-}
-.color_rectangles {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-.color_input {
-  all: unset;
-  padding: 0;
-  margin: 0;
-  height: 50px;
-  width: 20%;
-  background-color: #000;
-  border: 1px solid black;
-  border-radius: 5px;
-  outline-color: "red";
-  outline-style: none;
-  box-sizing: content-box;
-}
+
 .all_color_modal_button {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.color_modal_box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.color_modal_button {
-  width: 100px;
-  height: 60px;
-  font-size: 16px;
-  background-color: transparent;
-  color: rgb(116, 116, 116);
-  border: 1px solid rgb(51, 51, 51);
-  border-radius: 5px;
-  cursor: pointer;
-}
-.color_modal_button:hover {
-  color: rgb(211, 211, 211);
-  border: 1px solid rgb(211, 211, 211);
-}
-.angle_curve_container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.angle_container_heading {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-.angle_container_heading {
-  font-size: 18px;
-}
-.angle_heading {
-  font-weight: 500;
-}
-.gradient-selector {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 4px solid gray;
-  overflow: hidden;
-}
 
-.needle {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 4px;
-  height: 100px;
-  background-color: white;
-  transform-origin: 50% 100%;
-  border: 2px solid white;
-  border-radius: 25px;
-}
-.center {
-  height: 15px;
-  width: 15px;
-  bottom: 50%;
-  left: 50%;
-  position: absolute;
-  background-color: gray;
-  border-radius: 50%;
-}
 .easing_curve_heading {
   font-size: 18px;
   font-weight: 500;

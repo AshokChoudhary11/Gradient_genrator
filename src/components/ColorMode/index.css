@@ -1,0 +1,28 @@
+.color_mode_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.color_mode_button {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(116, 116, 116);
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.color_mode_button:hover {
+  color: rgb(211, 211, 211);
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.color_mode_heading {
+  font-weight: 500;
+}
+
+.all_color_mode_button {
+  display: flex;
+  gap: 10px;
+}
