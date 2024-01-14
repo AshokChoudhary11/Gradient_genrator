@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import './index.css'
+import { UPDATE_GRIDENT_ANGLE } from "../../constants";
+import { useDispatch, useSelector } from "react-redux";
 
 
 export const Angle = () => {
     const [isDragging, setIsDragging] = useState(false);
-    const [angle, setAngle] = useState(0);
+    // const [newAngle, setAngle] = useState(0);
+
+    const dispatch = useDispatch();
+
+    const selectPrecision = (angle) => {
+        dispatch({ type: UPDATE_GRIDENT_ANGLE, value: angle })
+    }
+    const angle = useSelector(state => state.angle);
 
     const startDrag = () => {
         setIsDragging(true);
@@ -12,12 +21,13 @@ export const Angle = () => {
     const handleDrag = (event) => {
         if (isDragging) {
             const rect = event.currentTarget.getBoundingClientRect();
-            console.log(rect, event.clientX, event.clientY, "logggg")
+            // console.log(rect, event.clientX, event.clientY, "logggg")
             const x = event.clientX - rect.left - rect.width / 2;
             const y = event.clientY - rect.top - rect.height / 2;
 
             const newAngle = Math.atan2(y, x) * (180 / Math.PI);
-            setAngle(newAngle)
+            selectPrecision(newAngle)
+            // setAngle(newAngle)
         }
     };
 
@@ -29,7 +39,10 @@ export const Angle = () => {
             <div className="angle_container">
                 <div className="angle_container_heading">
                     <span className="angle_heading">Angle:</span>
-                    <span>{parseInt(angle)} deg</span>
+                    <span>{
+                        parseInt(angle)
+                    } deg</span>
+
                 </div>
                 <div
                     className="gradient-selector"

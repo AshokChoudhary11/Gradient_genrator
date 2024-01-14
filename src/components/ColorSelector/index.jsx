@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import './index.css';
 import { Plus, X } from "lucide-react";
+import { UPDATE_GRIDENT_COLORS } from "../../constants";
+import { useDispatch, useSelector } from "react-redux";
 
 const ColorSelector = () => {
+  const dispatch = useDispatch()
+  const setColors = (colors) => {
+    dispatch({ type: UPDATE_GRIDENT_COLORS, value: colors })
+  }
+  const colors = useSelector(state => state.colors)
 
-  const [colors, setColors] = useState([
-    { color: "#ffffff", enabled: true },
-    { color: "#000000", enabled: true },
-    { color: "#222222", enabled: false },
-    { color: "#222222", enabled: false },
-    { color: "#222222", enabled: false }
-  ]);
 
   const handleColorChange = (index, newColor) => {
     const updatedColors = [...colors];
@@ -26,7 +26,7 @@ const ColorSelector = () => {
         {colors.map(({ color, enabled }, index) => (
           <>
             {enabled ?
-              <div className="color_input_wrapper">
+              <div className="color_input_wrapper" key={index}>
                 <input
                   key={index}
                   value={color}
@@ -55,7 +55,7 @@ const ColorSelector = () => {
                 }
               </div>
               : colors[index - 1]?.enabled ?
-                <div className="color_input_wrapper">
+                <div className="color_input_wrapper" key={index}>
                   <div className="color_input_disabled" onClick={() => {
                     const newColors = colors;
                     colors[index].enabled = true;
@@ -66,15 +66,13 @@ const ColorSelector = () => {
                   </div>
                 </div>
                 :
-                <div className="color_input_disabled_completly">
+                <div className="color_input_disabled_completly" key={index}>
                 </div>
             }
           </>
         ))}
       </div>
-      {/* <input className="color_input" type="color" />
-      <input className="color_input" type="color" />
-      <input className="color_input" type="color" /> */}
+
     </div>
   );
 };

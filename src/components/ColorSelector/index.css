@@ -13,8 +13,8 @@
 }
 .color_input {
   margin: 0;
-  height: 48px;
-  width: 48px;
+  height: 78px;
+  width: 78px;
   padding: 0;
   overflow: hidden;
   outline: none;
@@ -36,8 +36,8 @@
   align-items: center;
   border: 2px solid rgb(43, 51, 59);
   border-radius: 6px;
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   position: relative;
 }
 .color_input_wrapper:hover > .color_input_remove_button {
@@ -45,8 +45,8 @@
 }
 
 .color_input_disabled {
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
   background-color: #1b2027;
   display: flex;
   justify-content: center;
@@ -56,8 +56,8 @@
 }
 
 .color_input_disabled_completly {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   background-color: #1b2027;
   display: flex;
   justify-content: center;
@@ -68,9 +68,9 @@
 
 .color_input_remove_button {
   position: absolute;
-  width: 48px;
+  width: 78px;
   height: 30px;
-  top: 48px;
+  top: 78px;
   left: 0px;
   justify-content: center;
   align-items: center;

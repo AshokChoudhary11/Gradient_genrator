@@ -36,14 +36,14 @@ header {
 }
 .header_part {
   display: flex;
-  padding: 30px 10px;
+  padding: 14px 10px;
   max-width: 1200px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
 }
 .logo {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   background: linear-gradient(to right, yellow, rgb(255, 145, 0));
   -webkit-background-clip: text;
@@ -51,7 +51,7 @@ header {
   color: transparent;
 }
 .blog_page {
-  font-size: 24px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
 }
@@ -94,11 +94,13 @@ header {
   align-items: center;
 }
 
-.gradient_header h2 {
+.gradient_header_heading {
   background: linear-gradient(to right, yellow, rgb(255, 145, 0));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .all_color_modal_button {
